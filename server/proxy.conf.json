@@ -1,0 +1,6 @@
+{
+    "/api": {
+        "target": "http://loaclahost:3001",
+        "secure": false
+    }
+}
