@@ -8,6 +8,6 @@ export class Rental {
       bedrooms: number;
       description: string;
       dailyRate: number;
-      shared: boolean;
-      createdAt: string;
+      shared?: boolean;
+      createdAt?: string;
 }

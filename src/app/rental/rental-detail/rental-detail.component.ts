@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { RentalService } from '../shared/rental.service';
+import { Location } from '@angular/common';
+
+import { RentalInMemoryService } from '../../rental-in-memory.service';
 import { Rental } from '../shared/rental.model';
 
 @Component({
@@ -12,19 +14,20 @@ export class RentalDetailComponent implements OnInit {
   rental: Rental;
 
   constructor(private route: ActivatedRoute,
-              private rentalService: RentalService) { }
+              private rentalService: RentalInMemoryService,
+              private location: Location) { }
 
   ngOnInit() {
-    this.route.params.subscribe(
-      (params) => {
-      this.getRental(params['rentalId']);
-      });
+    this.getRental();
   }
 
-  getRental(rentalId: string) {
-    this.rentalService.getRentalById(rentalId).subscribe((rental: Rental) => {
-      this.rental = rental;
-    });
+  getRental(): void  {
+    const id = this.route.snapshot.paramMap.get('rentalId');
+    this.rentalService.getRental(id).subscribe(rental => this.rental = rental);
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }

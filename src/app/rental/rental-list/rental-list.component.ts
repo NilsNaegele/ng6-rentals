@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RentalService } from '../shared/rental.service';
 import { Rental } from '../shared/rental.model';
+import { RentalInMemoryService } from '../../rental-in-memory.service';
 
 @Component({
   selector: 'app-rental-list',
@@ -11,21 +11,15 @@ export class RentalListComponent implements OnInit {
 
   rentals: Rental[] = [];
 
-  constructor(private rentalService: RentalService) { }
+  constructor(private rentalService: RentalInMemoryService) { }
+
+
+  getRentals(): void {
+    this.rentalService.getRentals().subscribe(rentals => this.rentals = rentals);
+  }
 
   ngOnInit() {
-    const rentalObservable = this.rentalService.getRentals();
-    rentalObservable.subscribe(
-      (rentals: Rental[]) => {
-        this.rentals = rentals;
-      },
-      (err) => {
-
-      },
-      () => {
-
-      }
-    );
+    this.getRentals();
   }
 
 }
