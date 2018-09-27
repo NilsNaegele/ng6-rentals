@@ -34,14 +34,14 @@ export class InMemoryDataService implements InMemoryDbService {
             },
             {
             'id': '3',
-            'title': 'Old house in nature',
-            'city': 'Spisska Nova Ves',
-            'street': 'Banicka 1',
+            'title': 'Beautiful house on square',
+            'city': 'Berlin',
+            'street': 'Unter den Linden 18',
             'category': 'house',
             'image': 'https://booksync-jerga-prod.s3.amazonaws.com/uploads/rental/image/5/image.jpeg',
             'bedrooms': 5,
             'shared': false,
-            'description': 'Very nice apartment in center of the city.',
+            'description': 'Very nice housing in center of the city.',
             'dailyRate': 23,
             'createdAt': '27.02.2018'
           },
