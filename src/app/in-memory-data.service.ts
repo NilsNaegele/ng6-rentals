@@ -1,6 +1,7 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 import { Rental } from './rental/shared/rental.model';
+import { User } from './auth/shared/user.model';
 
 
 export class InMemoryDataService implements InMemoryDbService {
@@ -98,7 +99,21 @@ export class InMemoryDataService implements InMemoryDbService {
             'createdAt': '20.07.2018'
           }
         ];
-        return { rentals };
+        const users: User[] = [{
+          id: 1,
+          'name': 'Test User',
+          'email': 'test@gmail.com',
+          'password': 'test',
+          'confirmPassword': 'test'
+          }, {
+          id: 2,
+          'name': 'Test User 2',
+          'email': 'test1@gmail.com',
+          'password': 'test',
+          'confirmPassword': 'test'
+          }
+        ];
+        return { rentals, users };
     }
 
 }
