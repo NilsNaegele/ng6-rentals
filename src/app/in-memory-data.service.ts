@@ -2,6 +2,7 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 import { Rental } from './rental/shared/rental.model';
 import { User } from './auth/shared/user.model';
+import { Booking } from './booking/shared/booking.model';
 
 
 export class InMemoryDataService implements InMemoryDbService {
@@ -18,7 +19,27 @@ export class InMemoryDataService implements InMemoryDbService {
             'shared': false,
             'description': 'Very nice apartment in center of the city.',
             'dailyRate': 43,
-            'createdAt': '24.12.2017'
+            'createdAt': '24.12.2017',
+            'bookings': [
+              { id: '1',
+                startAt: '2018-10-01T00:00:00.00Z',
+                endAt: '2018-10-08T00:00:00.00Z',
+                totalPrice: 301,
+                guests: 4,
+                days: 7,
+                createdAt: '2018-09-30T00:00:00.00Z',
+                userId: 1
+              },
+              { id: '2',
+                startAt: '2018-10-22T00:00:00.00Z',
+                endAt: '2018-10-25T00:00:00.00Z',
+                totalPrice: 129,
+                guests: 2,
+                days: 3,
+                createdAt: '2018-10-16T00:00:00.00Z',
+                userId: 2
+              }
+            ]
             },
             {
             'id': '2',
@@ -31,7 +52,27 @@ export class InMemoryDataService implements InMemoryDbService {
             'shared': true,
             'description': 'Very nice apartment in center of the city.',
             'dailyRate': 11,
-            'createdAt': '13.01.2018'
+            'createdAt': '13.01.2018',
+            'bookings': [
+              { id: '1',
+                startAt: '2018-10-01T00:00:00.00Z',
+                endAt: '2018-10-08T00:00:00.00Z',
+                totalPrice: 301,
+                guests: 4,
+                days: 7,
+                createdAt: '2018-09-30T00:00:00.00Z',
+                userId: 1
+              },
+              { id: '2',
+                startAt: '2018-10-22T00:00:00.00Z',
+                endAt: '2018-10-25T00:00:00.00Z',
+                totalPrice: 129,
+                guests: 2,
+                days: 3,
+                createdAt: '2018-10-16T00:00:00.00Z',
+                userId: 2
+              }
+            ]
             },
             {
             'id': '3',
@@ -44,7 +85,27 @@ export class InMemoryDataService implements InMemoryDbService {
             'shared': false,
             'description': 'Very nice housing in center of the city.',
             'dailyRate': 23,
-            'createdAt': '27.02.2018'
+            'createdAt': '27.02.2018',
+            'bookings': [
+              { id: '1',
+                startAt: '2018-10-01T00:00:00.00Z',
+                endAt: '2018-10-08T00:00:00.00Z',
+                totalPrice: 301,
+                guests: 4,
+                days: 7,
+                createdAt: '2018-09-30T00:00:00.00Z',
+                userId: 1
+              },
+              { id: '2',
+                startAt: '2018-10-22T00:00:00.00Z',
+                endAt: '2018-10-25T00:00:00.00Z',
+                totalPrice: 129,
+                guests: 2,
+                days: 3,
+                createdAt: '2018-10-16T00:00:00.00Z',
+                userId: 2
+              }
+            ]
           },
           {
             'id': '4',
@@ -57,7 +118,27 @@ export class InMemoryDataService implements InMemoryDbService {
             'shared': false,
             'description': 'Hiking routes 10 min walking away',
             'dailyRate': 140,
-            'createdAt': '17.03.2018'
+            'createdAt': '17.03.2018',
+            'bookings': [
+              { id: '1',
+                startAt: '2018-10-01T00:00:00.00Z',
+                endAt: '2018-10-08T00:00:00.00Z',
+                totalPrice: 301,
+                guests: 4,
+                days: 7,
+                createdAt: '2018-09-30T00:00:00.00Z',
+                userId: 1
+              },
+              { id: '2',
+                startAt: '2018-10-22T00:00:00.00Z',
+                endAt: '2018-10-25T00:00:00.00Z',
+                totalPrice: 129,
+                guests: 2,
+                days: 3,
+                createdAt: '2018-10-16T00:00:00.00Z',
+                userId: 2
+              }
+            ]
             },
             {
             'id': '5',
@@ -70,7 +151,27 @@ export class InMemoryDataService implements InMemoryDbService {
             'shared': false,
             'description': 'Very nice apartment in China Town',
             'dailyRate': 89,
-            'createdAt': '01.04.2018'
+            'createdAt': '01.04.2018',
+            'bookings': [
+              { id: '1',
+                startAt: '2018-10-01T00:00:00.00Z',
+                endAt: '2018-10-08T00:00:00.00Z',
+                totalPrice: 301,
+                guests: 4,
+                days: 7,
+                createdAt: '2018-09-30T00:00:00.00Z',
+                userId: 1
+              },
+              { id: '2',
+                startAt: '2018-10-22T00:00:00.00Z',
+                endAt: '2018-10-25T00:00:00.00Z',
+                totalPrice: 129,
+                guests: 2,
+                days: 3,
+                createdAt: '2018-10-16T00:00:00.00Z',
+                userId: 2
+              }
+            ]
             },
             {
             'id': '6',
@@ -83,7 +184,27 @@ export class InMemoryDataService implements InMemoryDbService {
             'shared': false,
             'description': 'Very nice house in Long Island with garden',
             'dailyRate': 189,
-            'createdAt': '15.05.2018'
+            'createdAt': '15.05.2018',
+            'bookings': [
+              { id: '1',
+                startAt: '2018-10-01T00:00:00.00Z',
+                endAt: '2018-10-08T00:00:00.00Z',
+                totalPrice: 301,
+                guests: 4,
+                days: 7,
+                createdAt: '2018-09-30T00:00:00.00Z',
+                userId: 1
+              },
+              { id: '2',
+                startAt: '2018-10-22T00:00:00.00Z',
+                endAt: '2018-10-25T00:00:00.00Z',
+                totalPrice: 129,
+                guests: 2,
+                days: 3,
+                createdAt: '2018-10-16T00:00:00.00Z',
+                userId: 2
+              }
+            ]
           },
           {
             'id': '7',
@@ -96,7 +217,27 @@ export class InMemoryDataService implements InMemoryDbService {
             'shared': true,
             'description': 'Building close to Penn Station',
             'dailyRate': 68,
-            'createdAt': '20.07.2018'
+            'createdAt': '20.07.2018',
+            'bookings': [
+              { id: '1',
+                startAt: '2018-10-01T00:00:00.00Z',
+                endAt: '2018-10-08T00:00:00.00Z',
+                totalPrice: 301,
+                guests: 4,
+                days: 7,
+                createdAt: '2018-09-30T00:00:00.00Z',
+                userId: 1
+              },
+              { id: '2',
+                startAt: '2018-10-22T00:00:00.00Z',
+                endAt: '2018-10-25T00:00:00.00Z',
+                totalPrice: 129,
+                guests: 2,
+                days: 3,
+                createdAt: '2018-10-16T00:00:00.00Z',
+                userId: 2
+              }
+            ]
           }
         ];
         const users: User[] = [{
